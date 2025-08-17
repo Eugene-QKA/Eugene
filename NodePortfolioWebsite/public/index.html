@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eugene | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="icon" href="LOL.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+<script>
+  window.addEventListener('load', () => {
+    const cards = document.querySelectorAll('.skill-card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('show');
+      }, index * 1500); // 2 seconds delay between each
+    });
+  });
+  window.addEventListener('load', () => {
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('show');
+      }, index * 1500); // 2 seconds delay between each
+    });
+  });
+</script>
+
+<body>
+  
+<header class="main-header">
+  <div class="header-inner">
+    <img src="LOL.png" alt="Eugene Chia Logo" class="site-logo">
+    <h1 class="animate-name">Eugene Chia</h1>
+    <p class="animate-subtitle">Networking • QA Testing • Server Room Enthusiast</p>
+    <a href="#contact" class="btn">Let's Connect</a>
+  </div>
+</header>
+
+
+
+
+<!-- Hamburger Icon -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- Navbar -->
+<nav id="nav-links">
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#tools">Tools & Technologies</a>
+  <a href="#tech-stack">Tech Stack</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me 👨‍💻</h2>
+
+    <p>
+      I’m Eugene. I enjoy <span class="typing-word" data-text="networking"></span>, 
+      setting up <span class="typing-word" data-text="server rooms"></span>, and 
+      learning real-world IT infrastructure. I'm currently doing internship and exploring QA.
+    </p>
+  </section>
+  
+
+  <section id="education" data-aos="fade-up">
+    <h2>Education <i class="fas fa-graduation-cap"></i></h2>
+    <div class="education-timeline">
+      <div class="edu-card edu-animate-left">
+        <h3>APIIT - Certificate in Information & Communication Technology (CICT)</h3>
+        <p>Asia Pacific University (2022–2023)</p>
+        <p>1-year certificate program with foundation in programming and IT.</p>
+      </div>
+    
+      <div class="edu-card edu-animate-right">
+        <h3>Diploma in Information & Communication Technology with a specialism in Software Engineering</h3>
+        <p>Asia Pacific University (2023–2025)</p>
+        <p>Gained hands-on experience with Cisco networking, Windows/Linux server setups, subnetting, and basic cybersecurity practices.</p>
+      </div>
+    
+      <div class="edu-card coming-soon edu-animate-left">
+        <h3>Degree (Coming Soon)</h3>
+        <p>Bachelor of Software Engineering (Hons)</p>
+        <p>Planned at Sunway University – Start in 2025.</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <section id="skills">
+    <h2>Skills <i class="fas fa-tools"></i></h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+        <p>Experience in Cisco configuration and subnetting.</p>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-server"></i>
+        <h3>Server Administration</h3>
+        <p>Setup and maintenance of Windows Server environments.</p>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-bug"></i>
+        <h3>QA Testing</h3>
+        <p>Skilled in functional testing and bug reporting.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="projects" data-aos="fade-left">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="Screenshot 2025-07-10 162259.png" alt="Trash2Tech Screenshot">
+        <h3>Trash2Tech</h3>
+        <p>An e-waste management system with real-time pickup tracking and admin dashboard.</p>
+        <button class="view-btn">View More</button>
+      </div>
+      <div class="project-card">
+         <img src="Screenshot 2025-07-10 163324.png" alt="Consultation Booking Screenshot">
+         <h3>Consultation Booking System</h3>
+          <p>A desktop application developed using Java GUI for students to book consultation slots with lecturers efficiently.</p>
+       <button class="view-btn">View More</button>
+</div>
+
+  </section>
+
+  <section id="certifications" data-aos="fade-up">
+  <h2>Certifications <i class="fas fa-certificate"></i></h2>
+  <div class="cert-grid">
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-network-wired cert-icon"></i>
+      <h3>CCNA: Introduction to Networks</h3>
+      <p>Cisco Networking Academy · 2024</p>
+      <a href="_certificate_tp070401-mail-apu-edu-my_c3674410-5112-4d2c-b844-aa25228a850d.pdf" target="_blank" class="cert-btn">
+        <i class="fas fa-eye"></i> View Certificate
+      </a>
+    </div>
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="600">
+      <i class="fas fa-laptop-code cert-icon"></i>
+      <h3>Networking Basics</h3>
+      <p>Cisco Networking Academy · 2024</p>
+      <a href="_certificate_chiahanweneugene-gmail-com_c3a7eb57-598a-4031-aa59-77b05bad64e6.pdf" target="_blank" class="cert-btn">
+        <i class="fas fa-eye"></i> View Certificate
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="tools" data-aos="fade-up">
+  <h2>Tools & Technologies <i class="fas fa-toolbox"></i></h2>
+  <div class="tools-grid">
+    <div class="tool-card" data-aos="zoom-in" data-aos-delay="0">
+      <i class="fas fa-code"></i>
+      <h3>VS Code</h3>
+    </div>
+    <div class="tool-card" data-aos="zoom-in" data-aos-delay="200">
+      <i class="fas fa-terminal"></i>
+      <h3>Kali Linux</h3>
+    </div>
+    <div class="tool-card" data-aos="zoom-in" data-aos-delay="400">
+      <i class="fab fa-windows"></i>
+      <h3>Windows</h3>
+    </div>
+    <div class="tool-card" data-aos="zoom-in" data-aos-delay="600">
+      <i class="fas fa-server"></i>
+      <h3>Windows Server 2019</h3>
+    </div>
+  </div>
+</section>
+
+
+<section id="tech-stack" data-aos="fade-up">
+  <h2>Tech Stack <i class="fas fa-laptop-code"></i></h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- Repeat logos/icons here -->
+      <div class="carousel-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="carousel-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="carousel-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+      <div class="carousel-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+      <div class="carousel-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+      <div class="carousel-item"><i class="fab fa-linux"></i><span>Linux</span></div>
+      <div class="carousel-item"><i class="fab fa-windows"></i><span>Windows</span></div>
+      <div class="carousel-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+      <!-- duplicated for seamless looping -->
+      <div class="carousel-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="carousel-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" data-aos="fade-up">
+  <h2>Experience <i class="fas fa-briefcase"></i></h2>
+  <div class="experience-timeline">
+    <div class="exp-card">
+      <h3>IT Support Internship</h3>
+      <p><strong>Company:</strong> Synergy Software Solutions</p>
+      <p><strong>Duration:</strong> 30 June 2025 – 22 Aug 2025</p>
+      <ul>
+        <li>Installed accounting, POS, and stock software at client sites</li>
+        <li>Configured POS hardware drivers and performed QC checks</li>
+        <li>Set up product databases and pricing for clients</li>
+        <li>Handled stock monitoring and arranged hardware courier delivery</li>
+      </ul>
+    </div>
+    <div class="exp-card coming-soon">
+      <h3>Internship (Planned)</h3>
+      <p><strong>Company:</strong> TBD (2026)</p>
+      <p>Targeting internships related to QA testing and data center operations.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" data-aos="zoom-in" data-aos-delay="300">
+  <h2>Contact Me <i class="fas fa-envelope"></i></h2>
+
+  <form action="https://formspree.io/f/mnnzabjy" method="POST">
+    
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="thanks.html">
+    <input type="hidden" name="_autoresponse" value="Thanks! I’ve received your message. Will get back to you soon!">
+    <!-- ✅ Form fields -->
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="Your Name" 
+      required 
+      data-aos="fade-right" 
+      data-aos-delay="0" 
+    />
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Your Email" 
+      required 
+      data-aos="fade-right" 
+      data-aos-delay="200" 
+    />
+    <textarea 
+      name="message" 
+      placeholder="Your Message" 
+      required 
+      data-aos="fade-right" 
+      data-aos-delay="400"
+    ></textarea>
+    <button 
+      type="submit" 
+      data-aos="fade-right" 
+      data-aos-delay="600"
+    >
+      Send
+    </button>
+  </form>
+</section>
+
+
+<footer>
+  <p>&copy; 2025 Chia Han Wen Eugene. All rights reserved.</p>
+</footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>
