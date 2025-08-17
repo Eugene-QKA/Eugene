@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+/* ======= Navbar Styling ======= */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center nav links */
+    align-items: center;
+    background-color: #ACE1AF;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+/* Logo on Left */
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    width: 60px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #228B22;
+    border-radius: 5px;
+}
+
+/* ======= Login Button ======= */
+.login-btn {
+    position: absolute;
+    right: 70px; /* Adjusted spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+.login-btn:hover {
+    background-color: #ffdb4d;
+}
+
+/* ======= Hamburger Menu (Fixed Position) ======= */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Keeps it at the edge */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ======= Mobile Responsive Fix ======= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ACE1AF; /* Dark green */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0; /* Remove extra space */
+        margin: 0; /* Remove extra space */
+    }
+
+    /* 🔥 Show Navbar When Active */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Adjusted spacing */
+        text-align: center;
+    }
+
+    /* Show hamburger menu in mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Adjust Login Button for mobile */
+    .login-btn {
+        right: 55px; /* Keep spacing */
+        font-size: 12px;
+        padding: 3px 3px;
+        border-radius: 3px;
+    }
+
+    .logo-container{
+        top:50%;
+        transform: translateY(-50%);
+    }
+
+    .logo{
+        width: 40px;
+    }
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 75px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+    text-align: center; /* Centers headings for better mobile view */
+}
+
+/* Form Styling */
+.add-user-form input, .add-user-form select, .add-user-form button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+/* Password container */
+.password-container {
+    position: relative;
+    width: 80%;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+/* Input field */
+.password-container input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    font-size: 16px; /* Keep consistent font size */
+}
+
+/* Toggle button (eye icon) */
+.password-container button {
+    position: absolute;
+    right: -350px; /* Keeps the eye exactly where you want */
+    top: 32%;
+    transform: translateY(-50%);
+    background: none !important;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+/* Table */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Buttons */
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #f39c12;
+    color: white;
+    display: block;
+    border: none;
+    width: 80%;
+    margin: 5px auto;
+    text-align: center; /* 🔥 Ensures text is centered */
+    padding: 10px 0;    /* Optional: Equal top and bottom padding */
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+a.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 5px auto;
+    text-align: center; /* 🔥 Ensures text is centered */
+    padding: 10px 0;    /* Optional: Equal top and bottom padding */
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    text-decoration: none;
+}
+
+/* Add User button */
+.add-user-form button {
+    background: #27ae60;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-user-form button:hover {
+    background: #219150;
+}
+
+/* 📌 Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Make container take more space on smaller screens */
+        padding: 15px;
+    }
+
+    .add-user-form input, 
+    .add-user-form select, 
+    .add-user-form button {
+        width: 100%; /* Full width input fields */
+    }
+
+    /* Fix eye button position */
+    .password-container button {
+        right: -210px;
+        top: 35%;
+        transform: translateY(-50%);
+    }
+
+    table {
+        font-size: 14px; /* Smaller font for mobile */
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    /* Stack buttons for small screens */
+    .edit-btn, .delete-btn {
+        display: block;
+        width: 80%;
+        margin: 5px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    /* Make table scrollable */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+input {
+    font-size: 16px !important;  /* Force same font size on all inputs */
+    width: 100%;  /* Ensure it scales properly on smaller screens */
+}
+@media (max-width: 768px) {
+    input {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .password-container {
+        width: 100%; /* Make sure it adapts */
+    }
+}
+
+.footer {
+    background-color: #ACE1AF;
+    color: #2d6a4f;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%; /* Fix scrollbar issue */
+    position: absolute;
+    left: 0;
+    margin-top: 0px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #32de84;
+}

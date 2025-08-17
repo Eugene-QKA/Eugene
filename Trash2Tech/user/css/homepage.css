@@ -1,0 +1,533 @@
+/* ======= Reset & Global Styles ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ======= Navbar Styling ======= */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center nav links */
+    align-items: center;
+    background-color: #ACE1AF;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+/* Logo on Left */
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    width: 60px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #228B22;
+    border-radius: 5px;
+}
+
+/* ======= Login Button ======= */
+.login-btn {
+    position: absolute;
+    right: 70px; /* Adjusted spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+.login-btn:hover {
+    background-color: #ffdb4d;
+}
+
+/* ======= Hamburger Menu (Fixed Position) ======= */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Keeps it at the edge */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ======= Mobile Responsive Fix ======= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ACE1AF; /* Dark green */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0; /* Remove extra space */
+        margin: 0; /* Remove extra space */
+    }
+
+    /* 🔥 Show Navbar When Active */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Adjusted spacing */
+        text-align: center;
+    }
+
+    /* Show hamburger menu in mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Adjust Login Button for mobile */
+    .login-btn {
+        right: 55px; /* Keep spacing */
+        font-size: 12px;
+        padding: 3px 3px;
+        border-radius: 3px;
+    }
+
+    .logo-container{
+        top:50%;
+        transform: translateY(-50%);
+    }
+
+    .logo{
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .logo {
+        width: 30px; /* Further reduced for extra small screens */
+    }
+}
+
+.hero-section {
+    background: url('../images/photo-1532996122724-e3c354a0b15b.jpg') no-repeat center center/cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 68px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 80px auto 20px auto; /* center it horizontally */
+  }
+  
+  .hero-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.55); /* dark overlay */
+    padding: 40px 30px;
+    border-radius: 12px;
+    color: #fff;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* 💡 Responsive Styles */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 1.6rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.95rem;
+    }
+  }
+
+.features {
+    text-align: center;
+    padding: 70px 20px;
+    background:white;
+}
+
+.features h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1b5e20; /* Dark green */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.feature {
+    background:  #FFFFFF; /* Light transparency for glass effect */
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid #A5D6A7; /* Light Green Border */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 8px rgba(165, 214, 167, 0.5); /* Light Green Shadow */
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover img {
+    transform: scale(1.1);
+}
+
+.feature h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #2E7D32; /* Even darker green */
+}
+
+.feature p {
+    font-size: 16px;
+    color: #2E7D32;
+    font-weight: 500;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature {
+        width: 90%;
+    }
+}
+
+/* Impact Section Base Styles */
+.impact-section {
+    text-align: center;
+    padding: 70px 20px;
+    background:white;
+}
+
+.impact-section h2 {
+    color: #1B4332;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+}
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Stat Card Styling */
+.stat-item {
+    background: #FFFFFF; /* Glass effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    width: 280px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow Effect */
+.stat-item::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(84, 214, 140, 0.3) 10%, rgba(0, 0, 0, 0) 50%);
+    transform: rotate(30deg);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.stat-item:hover::before {
+    opacity: 1;
+}
+
+/* Hover Animation */
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon & Text Styling */
+.stat-item h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1B5E20; /* Deep Green */
+}
+
+.stat-item h3 span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1B5E20;
+    margin-left: 8px;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: #1B5E20;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .stats-container {
+        gap: 30px; /* Reduce spacing for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center; /* Center items in column layout */
+    }
+
+    .stat-item {
+        width: 90%;
+    }
+
+    .stat-item h3 {
+        font-size: 22px;
+    }
+
+    .stat-item p {
+        font-size: 16px;
+    }
+}
+
+.testimonial-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.testimonial-section h2{
+    color: #2d6a4f;
+}
+
+.testimonial-card {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
+.testimonial-card p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.testimonial-card h4 {
+    font-size: 1rem;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+    background: #ACE1AF; /* Green dots */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-card {
+        max-width: 90%;
+    }
+}
+
+.footer {
+    background-color: #ACE1AF;
+    color: #2d6a4f;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #32de84;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        margin-bottom: 10px;
+    }
+}

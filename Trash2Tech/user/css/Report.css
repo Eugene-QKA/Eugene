@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 80px; /* Adjust based on navbar height */
+    position: relative;
+}
+/* ======= Navbar Styling ======= */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center nav links */
+    align-items: center;
+    background-color: #ACE1AF;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+/* Logo on Left */
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    width: 60px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #228B22;
+    border-radius: 5px;
+}
+
+/* ======= Login Button ======= */
+.login-btn {
+    position: absolute;
+    right: 70px; /* Adjusted spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+.login-btn:hover {
+    background-color: #ffdb4d;
+}
+
+/* ======= Hamburger Menu (Fixed Position) ======= */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Keeps it at the edge */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ======= Mobile Responsive Fix ======= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ACE1AF; /* Dark green */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0; /* Remove extra space */
+        margin: 0; /* Remove extra space */
+    }
+
+    /* 🔥 Show Navbar When Active */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Adjusted spacing */
+        text-align: center;
+    }
+
+    /* Show hamburger menu in mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Adjust Login Button for mobile */
+    .login-btn {
+        right: 55px; /* Keep spacing */
+        font-size: 12px;
+        padding: 3px 3px;
+        border-radius: 3px;
+    }
+
+    .logo-container{
+        top:50%;
+        transform: translateY(-50%);
+    }
+
+    .logo{
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .logo {
+        width: 30px; /* Further reduced for extra small screens */
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Enables horizontal scrolling */
+    flex: 1;
+}
+
+/* 📌 Responsive Table */
+.table-container {
+    overflow-x: auto; /* Fixes table overflow on mobile */
+    width: 100%;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Prevents table from shrinking too much */
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap; /* Keeps text in one line */
+}
+
+th {
+    background: #007BFF;
+    color: white;
+}
+
+/* For the "Rejected" status */
+.status.rejected {
+    color: white;
+    background-color: #ff4d4d; /* Light red background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+/* 📱 Mobile-Friendly Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .table-container {
+        overflow-x: scroll; /* Enables scrolling on small screens */
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+.footer {
+    background-color: #ACE1AF;
+    color: #2d6a4f;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+    clear: both;
+}
+
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #32de84;
+}
+
+.wrapper {
+    min-height: 100vh; /* full height */
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        margin-bottom: 10px;
+    }
+}
+
+.status.in-progress {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.completed{ 
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.pending{ 
+    background-color: grey;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.details {
+    display: none;
+}

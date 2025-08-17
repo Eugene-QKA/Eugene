@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 100px;
+}
+/* ======= Navbar Styling ======= */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center nav links */
+    align-items: center;
+    background-color: #ACE1AF;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+/* Logo on Left */
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    width: 60px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #228B22;
+    border-radius: 5px;
+}
+
+/* ======= Login Button ======= */
+.login-btn {
+    position: absolute;
+    right: 70px; /* Adjusted spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+.login-btn:hover {
+    background-color: #ffdb4d;
+}
+
+/* ======= Hamburger Menu (Fixed Position) ======= */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Keeps it at the edge */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ======= Mobile Responsive Fix ======= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ACE1AF; /* Dark green */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0; /* Remove extra space */
+        margin: 0; /* Remove extra space */
+    }
+
+    /* 🔥 Show Navbar When Active */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Adjusted spacing */
+        text-align: center;
+    }
+
+    /* Show hamburger menu in mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Adjust Login Button for mobile */
+    .login-btn {
+        right: 55px; /* Keep spacing */
+        font-size: 12px;
+        padding: 3px 3px;
+        border-radius: 3px;
+    }
+
+    .logo-container{
+        top:50%;
+        transform: translateY(-50%);
+    }
+
+    .logo{
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .logo {
+        width: 30px; /* Further reduced for extra small screens */
+    }
+}
+
+.pickup-container {
+    width: 50%;
+    margin: auto;
+    background: #f8fdf3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pickup-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    all: unset;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 100px;
+    height: 40px; /* 👈 Force equal height */
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1; /* 👈 Keeps text vertically centered */
+}
+
+/* Accept Button */
+.accept-btn {
+    background-color: green;
+    color: white;
+}
+
+/* Complete Button */
+.complete-btn {
+    background-color: gray;
+    color: white;
+}
+
+/* Reject Button */
+.reject-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.reject-btn:hover {
+    background-color: #e60000;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .pickup-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pickup-container {
+        width: 90%;
+    }
+
+    .pickup-card {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .pickup-card p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pickup-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .pickup-card {
+        padding: 10px;
+    }
+
+    .pickup-card p {
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%; /* Full width buttons */
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+}
+
+#map {
+    width: 50%; /* Match the pickup-container width */
+    height: 400px; /* Adjust height */
+    margin: 20px auto; /* Center the map */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Map */
+@media (max-width: 1024px) {
+    #map {
+        width: 80%;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    #map {
+        width: 90%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #map {
+        width: 95%;
+        height: 250px;
+    }
+}
+.footer {
+    background-color: #ACE1AF;
+    color: #2d6a4f;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%; /* Fix scrollbar issue */
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #32de84;
+}
+
+.reject-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.bottom-button {
+    text-align: center; 
+}
+
+.locate-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.locate-btn:hover {
+    background-color: #ddd;
+}
+
+
