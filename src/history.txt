@@ -1,0 +1,10 @@
+Benny,2024-06-08,14:00,Completed
+David,2024-06-08,09:00 AM,Completed
+Emily Davis,2024-06-08,02:00 PM,Cancelled
+David Martinez,2024-06-08,09:00 AM,Completed
+Laura Garcia,2024-06-09,10:00 AM,Cancelled
+James Anderson,2024-06-10,11:00 AM,Cancelled
+Laura Garcia,2024-06-09,10:00 AM,Completed
+Emily Davis,2024-06-05,02:00 PM,Cancelled
+James Anderson,2024-06-10,09:00 AM,Completed
+Adler,10/12/2024,09:00 AM,Cancelled
